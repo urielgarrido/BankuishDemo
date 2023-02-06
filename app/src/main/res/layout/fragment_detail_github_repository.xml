@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.GitHubRepositoryDetailFragment">
+
+    <TextView
+        android:id="@+id/name_repository_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Repository Name"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/owner_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Owner: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_repository_text_view" />
+
+    <ImageView
+        android:id="@+id/owner_image_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/circle_background"
+        app:layout_constraintStart_toEndOf="@id/owner_text_view"
+        app:layout_constraintTop_toTopOf="@id/owner_text_view" />
+
+    <TextView
+        android:id="@+id/owner_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Owner Name"
+        app:layout_constraintBottom_toBottomOf="@id/owner_image_view"
+        app:layout_constraintStart_toEndOf="@id/owner_image_view"
+        app:layout_constraintTop_toTopOf="@id/owner_image_view" />
+
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Description: "
+        app:layout_constraintStart_toStartOf="@id/owner_text_view"
+        app:layout_constraintTop_toBottomOf="@id/owner_text_view" />
+
+    <TextView
+        android:id="@+id/description_data_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Estes es un texto largo de muestra para saber si el layout se banca esta informacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/description_text_view"
+        app:layout_constraintTop_toBottomOf="@id/description_text_view" />
+
+    <TextView
+        android:id="@+id/createdAt_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Created At: "
+        app:layout_constraintStart_toStartOf="@id/description_text_view"
+        app:layout_constraintTop_toBottomOf="@id/description_data_text_view" />
+
+    <TextView
+        android:id="@+id/createdAt_data_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="19-05-2017"
+        app:layout_constraintStart_toEndOf="@id/createdAt_text_view"
+        app:layout_constraintTop_toTopOf="@id/createdAt_text_view" />
+
+    <TextView
+        android:id="@+id/watchers_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Watchers: "
+        app:layout_constraintStart_toStartOf="@id/createdAt_text_view"
+        app:layout_constraintTop_toBottomOf="@id/createdAt_text_view" />
+
+    <TextView
+        android:id="@+id/watchers_data_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="19"
+        app:layout_constraintStart_toEndOf="@id/watchers_text_view"
+        app:layout_constraintTop_toTopOf="@id/watchers_text_view" />
+
+    <TextView
+        android:id="@+id/license_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="License: "
+        app:layout_constraintStart_toStartOf="@id/watchers_text_view"
+        app:layout_constraintTop_toBottomOf="@id/watchers_text_view" />
+
+    <TextView
+        android:id="@+id/license_data_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Apache License 2.0"
+        app:layout_constraintStart_toEndOf="@id/license_text_view"
+        app:layout_constraintTop_toTopOf="@id/license_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
