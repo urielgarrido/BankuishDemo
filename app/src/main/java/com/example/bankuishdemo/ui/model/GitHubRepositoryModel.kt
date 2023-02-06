@@ -8,7 +8,7 @@ data class GitHubRepositoryModel(
     val repositoryName: String,
     val ownerName: String,
     val imageUrl: String,
-    val description: String,
+    val description: String? = null,
     val createdAt: String,
     val license: String? = null,
     val watchers: Int

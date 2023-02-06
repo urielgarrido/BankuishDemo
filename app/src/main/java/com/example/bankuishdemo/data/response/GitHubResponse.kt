@@ -8,7 +8,7 @@ data class GitHubResponse(
 
 data class GitHubResponseItems(
     @SerializedName("name") val name: String,
-    @SerializedName("description") val description: String,
+    @SerializedName("description") val description: String?,
     @SerializedName("created_at") val createdAt: String,
     @SerializedName("watchers") val watchers: Int,
     @SerializedName("owner") val owner: Owner,
