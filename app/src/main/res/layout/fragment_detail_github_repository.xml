@@ -40,10 +40,11 @@
 
     <TextView
         android:id="@+id/owner_name_text_view"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Owner Name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/owner_image_view"
         app:layout_constraintStart_toEndOf="@id/owner_image_view"
         app:layout_constraintTop_toTopOf="@id/owner_image_view" />
@@ -52,10 +53,10 @@
         android:id="@+id/description_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:text="Description: "
         app:layout_constraintStart_toStartOf="@id/owner_text_view"
-        app:layout_constraintTop_toBottomOf="@id/owner_text_view" />
+        app:layout_constraintTop_toBottomOf="@id/owner_image_view" />
 
     <TextView
         android:id="@+id/description_data_text_view"
@@ -114,10 +115,11 @@
 
     <TextView
         android:id="@+id/license_data_text_view"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="Apache License 2.0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/license_text_view"
         app:layout_constraintTop_toTopOf="@id/license_text_view" />
 

@@ -1,12 +1,14 @@
 package com.example.bankuishdemo.usecases
 
-import com.example.bankuishdemo.data.GitHubService
-import com.example.bankuishdemo.data.response.GitHubResponse
+import androidx.paging.PagingData
+import com.example.bankuishdemo.data.response.GitHubResponseItems
+import com.example.bankuishdemo.ui.paging.GitHubRepositoryDataSource
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetGitHubRepositoriesUseCase @Inject constructor(private val service: GitHubService) {
+class GetGitHubRepositoriesUseCase @Inject constructor(private val dataSource: GitHubRepositoryDataSource) {
 
-    suspend operator fun invoke(searchQuery: String): GitHubResponse? {
-        return service.getGitHubRepositories(searchQuery)
+    operator fun invoke(): Flow<PagingData<GitHubResponseItems>> {
+        return dataSource.getGitHubRepositories()
     }
 }

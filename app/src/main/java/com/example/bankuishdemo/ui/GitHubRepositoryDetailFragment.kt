@@ -37,10 +37,16 @@ class GitHubRepositoryDetailFragment: Fragment() {
             nameRepositoryTextView.text = gitHubRepositoryModel.repositoryName
             setImage(gitHubRepositoryModel.imageUrl)
             ownerNameTextView.text = gitHubRepositoryModel.ownerName
-            descriptionDataTextView.text = gitHubRepositoryModel.description
             createdAtDataTextView.text = transformDate(gitHubRepositoryModel.createdAt)
             watchersDataTextView.text = gitHubRepositoryModel.watchers.toString()
         }
+        if (gitHubRepositoryModel.description.isNullOrEmpty()) {
+            binding.descriptionTextView.isVisible = false
+            binding.descriptionDataTextView.isVisible = false
+        } else {
+            binding.descriptionDataTextView.text = gitHubRepositoryModel.description
+        }
+
         if (gitHubRepositoryModel.license.isNullOrEmpty()) {
             binding.licenseTextView.isVisible = false
             binding.licenseDataTextView.isVisible = false
